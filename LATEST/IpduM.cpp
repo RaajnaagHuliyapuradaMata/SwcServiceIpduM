@@ -43,7 +43,8 @@ class module_IpduM:
 /******************************************************************************/
             Std_TypeReturn          IsInitDone{E_NOT_OK};
       const CfgModule_TypeAbstract* lptrCfg{(CfgModule_TypeAbstract*)NULL_PTR};
-            infPduRClient_Lo        infPduRClient_IpduM;
+            infPduRClient_Up        infPduRClient_IpduM_Up;
+            infPduRClient_Lo        infPduRClient_IpduM_Lo;
 
    public:
       module_IpduM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
