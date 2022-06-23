@@ -132,7 +132,9 @@ FUNC(void, IPDUM_CODE) module_IpduM::InitFunction(
 #endif
 }
 
-FUNC(void, IPDUM_CODE) module_IpduM::DeInitFunction(void){
+FUNC(void, IPDUM_CODE) module_IpduM::DeInitFunction(
+   void
+){
 #if(STD_ON == IpduM_InitCheck)
    if(
          E_OK
@@ -155,7 +157,9 @@ FUNC(void, IPDUM_CODE) module_IpduM::DeInitFunction(void){
 #endif
 }
 
-FUNC(void, IPDUM_CODE) module_IpduM::MainFunction(void){
+FUNC(void, IPDUM_CODE) module_IpduM::MainFunction(
+   void
+){
 #if(STD_ON == IpduM_InitCheck)
    if(
          E_OK
@@ -177,7 +181,9 @@ FUNC(void, IPDUM_CODE) module_IpduM::MainFunction(void){
 #endif
 }
 
-FUNC(void, IPDUM_CODE) module_IpduM::dummy(void){
+FUNC(void, IPDUM_CODE) module_IpduM::dummy(
+   void
+){
 }
 
 /******************************************************************************/
