@@ -41,14 +41,10 @@ class module_IpduM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-            Std_TypeReturn          IsInitDone{E_NOT_OK};
-      const CfgModule_TypeAbstract* lptrCfg{(CfgModule_TypeAbstract*)NULL_PTR};
             infPduRClient_Up        infPduRClient_IpduM_Up;
             infPduRClient_Lo        infPduRClient_IpduM_Lo;
 
    public:
-      module_IpduM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
-      }
       FUNC(void, IPDUM_CODE) InitFunction(
          CONSTP2CONST(CfgModule_TypeAbstract, IPDUM_CONFIG_DATA, IPDUM_APPL_CONST) lptrCfgModule
       );
@@ -73,18 +69,7 @@ CONSTP2VAR(infSchMClient, IPDUM_VAR, IPDUM_CONST) gptrinfSchMClient_IpduM = &Ipd
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_IpduM, IPDUM_VAR) IpduM(
-   {
-         IPDUM_AR_RELEASE_VERSION_MAJOR
-      ,  IPDUM_AR_RELEASE_VERSION_MINOR
-      ,  0x00
-      ,  0xFF
-      ,  0x01
-      ,  '0'
-      ,  '1'
-      ,  '0'
-   }
-);
+VAR(module_IpduM, IPDUM_VAR) IpduM;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
