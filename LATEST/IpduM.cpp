@@ -84,12 +84,7 @@ FUNC(void, IPDUM_CODE) module_IpduM::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgIpduM;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == IpduM_DevErrorDetect)
