@@ -1,23 +1,19 @@
 #pragma once
 /******************************************************************************/
-/* File   : infIpduM_Exp.hpp                                                  */
+/* File   : IpduM.hpp                                                         */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "infIpduM_EcuM.hpp"
-#include "infIpduM_Dcm.hpp"
-#include "infIpduM_Det.hpp"
-#include "infIpduM_SchM.hpp"
-#include "infPduRClient_Up.hpp"
-#include "infPduRClient_Lo.hpp"
+#include "CfgIpduM.hpp"
+#include "IpduM_core.hpp"
+#include "infIpduM_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define INTERFACES_EXPORTED_IPDUM
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -26,6 +22,29 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class module_IpduM:
+      INTERFACES_EXPORTED_IPDUM
+      public abstract_module
+   ,  public class_IpduM_Functionality
+{
+   private:
+/******************************************************************************/
+/* OBJECTS                                                                    */
+/******************************************************************************/
+      infPduRClient_Up infPduRClient_IpduM_Up;
+      infPduRClient_Lo infPduRClient_IpduM_Lo;
+
+   public:
+/******************************************************************************/
+/* FUNCTIONS                                                                  */
+/******************************************************************************/
+      FUNC(void, IPDUM_CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, IPDUM_CONFIG_DATA, IPDUM_APPL_CONST) lptrCfgModule
+      );
+      FUNC(void, IPDUM_CODE) DeInitFunction (void);
+      FUNC(void, IPDUM_CODE) MainFunction   (void);
+      IPDUM_CORE_FUNCTIONALITIES
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */
@@ -38,10 +57,7 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-
-/******************************************************************************/
-/* FUNCTIONS                                                                  */
-/******************************************************************************/
+extern VAR(module_IpduM, IPDUM_VAR) IpduM;
 
 /******************************************************************************/
 /* EOF                                                                        */

@@ -7,9 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
-#include "CfgIpduM.hpp"
-#include "IpduM_core.hpp"
-#include "infIpduM_Exp.hpp"
+#include "IpduM.hpp"
 #include "infIpduM_Imp.hpp"
 
 /******************************************************************************/
@@ -32,28 +30,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class module_IpduM:
-      INTERFACES_EXPORTED_IPDUM
-      public abstract_module
-   ,  public class_IpduM_Functionality
-{
-   private:
-/******************************************************************************/
-/* OBJECTS                                                                    */
-/******************************************************************************/
-            infPduRClient_Up        infPduRClient_IpduM_Up;
-            infPduRClient_Lo        infPduRClient_IpduM_Lo;
-
-   public:
-      FUNC(void, IPDUM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, IPDUM_CONFIG_DATA, IPDUM_APPL_CONST) lptrCfgModule
-      );
-      FUNC(void, IPDUM_CODE) DeInitFunction (void);
-      FUNC(void, IPDUM_CODE) MainFunction   (void);
-      IPDUM_CORE_FUNCTIONALITIES
-};
-
-extern VAR(module_IpduM, IPDUM_VAR) IpduM;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
