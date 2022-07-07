@@ -35,8 +35,6 @@
 /* CONSTS                                                                     */
 /******************************************************************************/
 CONSTP2VAR(infEcuMClient, IPDUM_VAR, IPDUM_CONST) gptrinfEcuMClient_IpduM = &IpduM;
-CONSTP2VAR(infDcmClient,  IPDUM_VAR, IPDUM_CONST) gptrinfDcmClient_IpduM  = &IpduM;
-CONSTP2VAR(infSchMClient, IPDUM_VAR, IPDUM_CONST) gptrinfSchMClient_IpduM = &IpduM;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
