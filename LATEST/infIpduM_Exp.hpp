@@ -7,7 +7,6 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "infIpduM_EcuM.hpp"
 #include "infIpduM_Det.hpp"
 #include "infPduRClient_Up.hpp"
 #include "infPduRClient_Lo.hpp"
