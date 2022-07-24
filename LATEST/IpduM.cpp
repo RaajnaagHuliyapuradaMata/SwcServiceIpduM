@@ -48,7 +48,8 @@ VAR(module_IpduM, IPDUM_VAR) IpduM;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, IPDUM_CODE) module_IpduM::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, IPDUM_CONFIG_DATA, IPDUM_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, IPDUM_CONST,       IPDUM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   IPDUM_CONFIG_DATA, IPDUM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == IpduM_InitCheck)
    if(
@@ -56,8 +57,12 @@ FUNC(void, IPDUM_CODE) module_IpduM::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == IpduM_DevErrorDetect)

@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstIpduM.hpp"
 #include "CfgIpduM.hpp"
 #include "IpduM_core.hpp"
 #include "infIpduM_Exp.hpp"
@@ -31,6 +32,7 @@ class module_IpduM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstIpduM_Type* lptrConst = (ConstIpduM_Type*)NULL_PTR;
       infPduRClient_Up infPduRClient_IpduM_Up;
       infPduRClient_Lo infPduRClient_IpduM_Lo;
 
@@ -39,7 +41,8 @@ class module_IpduM:
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, IPDUM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, IPDUM_CONFIG_DATA, IPDUM_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, IPDUM_CONST,       IPDUM_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   IPDUM_CONFIG_DATA, IPDUM_APPL_CONST) lptrCfgModule
       );
       FUNC(void, IPDUM_CODE) DeInitFunction (void);
       FUNC(void, IPDUM_CODE) MainFunction   (void);
