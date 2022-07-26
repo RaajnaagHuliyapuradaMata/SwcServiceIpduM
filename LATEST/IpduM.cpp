@@ -61,7 +61,7 @@ FUNC(void, IPDUM_CODE) module_IpduM::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstIpduM_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
