@@ -12,11 +12,11 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define IPDUM_CORE_FUNCTIONALITIES                                             \
-              FUNC(void, IPDUM_CODE) dummy                         (void);     \
+#define SERVICEIPDUM_CORE_FUNCTIONALITIES                                             \
+              FUNC(void, SERVICEIPDUM_CODE) dummy                         (void);     \
 
-#define IPDUM_CORE_FUNCTIONALITIES_VIRTUAL                                     \
-      virtual FUNC(void, IPDUM_CODE) dummy                         (void) = 0; \
+#define SERVICEIPDUM_CORE_FUNCTIONALITIES_VIRTUAL                                     \
+      virtual FUNC(void, SERVICEIPDUM_CODE) dummy                         (void) = 0; \
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -27,7 +27,7 @@
 /******************************************************************************/
 class class_ServiceIpduM_Functionality{
    public:
-      IPDUM_CORE_FUNCTIONALITIES_VIRTUAL
+      SERVICEIPDUM_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/

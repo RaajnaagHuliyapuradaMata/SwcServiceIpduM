@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define IPDUM_AR_RELEASE_VERSION_MAJOR                                         4
-#define IPDUM_AR_RELEASE_VERSION_MINOR                                         3
+#define SERVICEIPDUM_AR_RELEASE_VERSION_MAJOR                                         4
+#define SERVICEIPDUM_AR_RELEASE_VERSION_MINOR                                         3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(IPDUM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible IPDUM_AR_RELEASE_VERSION_MAJOR!"
+#if(SERVICEIPDUM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible SERVICEIPDUM_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(IPDUM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible IPDUM_AR_RELEASE_VERSION_MINOR!"
+#if(SERVICEIPDUM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible SERVICEIPDUM_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_ServiceIpduM, IPDUM_VAR) ServiceIpduM;
+VAR(module_ServiceIpduM, SERVICEIPDUM_VAR) ServiceIpduM;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, IPDUM_CODE) module_ServiceIpduM::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, IPDUM_CONST,       IPDUM_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   IPDUM_CONFIG_DATA, IPDUM_APPL_CONST) lptrCfgModule
+FUNC(void, SERVICEIPDUM_CODE) module_ServiceIpduM::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICEIPDUM_CONST,       SERVICEIPDUM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEIPDUM_CONFIG_DATA, SERVICEIPDUM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceIpduM_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, IPDUM_CODE) module_ServiceIpduM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  IPDUM_E_UNINIT
+         ,  SERVICEIPDUM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, IPDUM_CODE) module_ServiceIpduM::DeInitFunction(
+FUNC(void, SERVICEIPDUM_CODE) module_ServiceIpduM::DeInitFunction(
    void
 ){
 #if(STD_ON == ServiceIpduM_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, IPDUM_CODE) module_ServiceIpduM::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  IPDUM_E_UNINIT
+         ,  SERVICEIPDUM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, IPDUM_CODE) module_ServiceIpduM::MainFunction(
+FUNC(void, SERVICEIPDUM_CODE) module_ServiceIpduM::MainFunction(
    void
 ){
 #if(STD_ON == ServiceIpduM_InitCheck)
@@ -132,14 +132,14 @@ FUNC(void, IPDUM_CODE) module_ServiceIpduM::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  IPDUM_E_UNINIT
+         ,  SERVICEIPDUM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, IPDUM_CODE) module_ServiceIpduM::dummy(
+FUNC(void, SERVICEIPDUM_CODE) module_ServiceIpduM::dummy(
    void
 ){
 }

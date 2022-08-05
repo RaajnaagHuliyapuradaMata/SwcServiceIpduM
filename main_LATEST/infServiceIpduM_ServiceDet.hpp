@@ -21,7 +21,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 typedef enum{
-      IPDUM_E_UNINIT
+      SERVICEIPDUM_E_UNINIT
 }ServiceIpduM_TypeServiceDetErrorCode;
 
 /******************************************************************************/
