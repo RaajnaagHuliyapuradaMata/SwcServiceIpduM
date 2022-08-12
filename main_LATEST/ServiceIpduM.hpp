@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceIpduM:
-      INTERFACES_EXMCALPORTED_SERVICEIPDUM
+      INTERFACES_EXPORTED_SERVICEIPDUM
       public abstract_module
    ,  public class_ServiceIpduM_Functionality
 {
