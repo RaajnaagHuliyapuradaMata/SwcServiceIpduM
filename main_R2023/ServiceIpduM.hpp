@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : ServiceIpduM.hpp                                                         */
+/* File   : ServiceIpduM.hpp                                                  */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstServiceIpduM.hpp"
+#include "infServiceIpduM_ServiceNvM_Types.hpp"
 #include "CfgServiceIpduM.hpp"
 #include "ServiceIpduM_core.hpp"
 #include "infServiceIpduM_Exp.hpp"
