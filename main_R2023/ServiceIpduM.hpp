@@ -32,7 +32,7 @@ class module_ServiceIpduM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-      const ConstServiceIpduM_Type* lptrConst = (ConstServiceIpduM_Type*)NULL_PTR;
+      const ConstModule_TypeAbstract* lptrNvMBlocksRom = (ConstModule_TypeAbstract*)NULL_PTR;
       infServicePduRClient_Up infServicePduRClient_ServiceIpduM_Up;
       infServicePduRClient_Lo infServicePduRClient_ServiceIpduM_Lo;
 
@@ -41,7 +41,7 @@ class module_ServiceIpduM:
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, SERVICEIPDUM_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, SERVICEIPDUM_CONST,       SERVICEIPDUM_APPL_CONST) lptrConstModule
+            CONSTP2CONST(ConstModule_TypeAbstract, SERVICEIPDUM_CONST,       SERVICEIPDUM_APPL_CONST) lptrNvMBlocksRomModule
          ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEIPDUM_CONFIG_DATA, SERVICEIPDUM_APPL_CONST) lptrCfgModule
       );
       FUNC(void, SERVICEIPDUM_CODE) DeInitFunction (void);
